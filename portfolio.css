@@ -1,0 +1,425 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  scroll-behavior: smooth;
+  --site-background: #0b0c10;
+  --text-color: #fff;
+  --link-color: #66fcf1;
+  --link-hover-color: red;
+  --heading-bg-color: #375eab;
+  --project-bg-color: rgba(0, 0, 0, 0.75);
+  --project-in-color: #45a29e;
+  --site-font: "Raleway", sans-serif;
+  --tag-line-font: "Nanum Brush Script", cursive;
+}
+
+body,
+h1,
+h2 {
+  font-family: var(--site-font);
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+body {
+  background-color: #0b0c10;
+  background: url(https://backgroundcheckall.com/wp-content/uploads/2017/12/background-technology-black-7.jpg)
+    no-repeat center center fixed;
+  background-size: cover;
+  min-width: 320px;
+}
+
+h1,
+h2 {
+  color: var(--text-color);
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+#navbar {
+  color: var(--heading-bg-color);
+  font-size: 1.2rem;
+  padding: 0rem 1rem;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 85px;
+  text-align: right;
+  transition: 0.5s;
+  position: fixed;
+}
+
+#welcome-section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid white;
+}
+
+#projects {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid white;
+  padding: 100px 10px;
+}
+
+.project-label {
+  color: #fff;
+  font-size: 1rem;
+  padding: 5px 5px 0px 10px;
+} 
+
+.border {
+  width: 20%;
+  border-bottom: 1px solid #fff;
+  margin-left: 10px;
+}
+
+.prod-desc {
+  color: #fff;
+  font-size: .8rem;
+  letter-spacing: 0.2em;
+  margin: 5px 10px;
+}
+
+.project-tile a {
+  color: #45a29e;
+  margin: 5px 10px;
+}
+
+.flex-start {
+  justify-content: flex-start;
+}
+
+.prof-link,
+.nav-section > ul li {
+  display: inline-block;
+  margin: 0rem 2em 0 0;
+  border: 1px solid transparent;
+  font-size: 1.2rem;
+  padding: 0.25rem 2rem;
+  text-decoration: none;
+  line-height: 2rem;
+  white-space: nowrap;
+  border-radius: 0.4rem;
+  transition: all 0.3s ease-out;
+  transition-property: background-color, color, border-color;
+  overflow: hidden;
+  position: relative;
+}
+
+.prof-link,
+.nav-link,
+.project-tile a {
+  text-decoration: none;
+  color: var(--link-color);
+}
+
+.nav-link:hover,
+.project-tile a:hover {
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav-section > ul li.selected,
+.nav-section > ul li:hover {
+  color: #fff;
+  border-color: red;
+  background-color: rgba(255, 0, 0, 0.4);
+}
+.project-tile,
+.prof-link {
+  transition: all 0.3s ease-out;
+  transition-property: background-color, color, border-color;
+}
+
+.contact-btn.selected,
+.contact-btn:hover,
+.prof-link.selected,
+.prof-link:hover,
+.project-tile.selected,
+.project-tile:hover {
+  border-color: rgba(197, 198, 199);
+  background-color: rgba(46, 49, 49, 1);
+ 
+}
+
+.email-container {
+  margin: 0 auto;
+  padding-top: 15px;
+  width: 200px;
+}
+
+.contact-email,
+.contact-message,
+.contact-name {
+  width: 100%;
+  margin: 12px;
+  padding: 0 0 10px;
+  background: none;
+  border: none;
+  border-bottom: 3px solid var(--link-color);
+  border-radius: 0;
+  box-sizing: border-box;
+  font: 1rem var(--site-font);
+  transition: all 0.4s ease;
+}
+
+.contact-btn {
+  background: none;
+  border: none;
+  color: #66fcf1;
+  box-sizing: border-box;
+  padding: 0.25rem 2rem;
+  text-decoration: none;
+  line-height: 2rem;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  border-radius: 0.4rem;
+  font: 1rem var(--site-font);
+  transition: all 0.4s ease;
+  float: right;
+}
+
+.footer-links {
+  text-align: center;
+  padding-top: 55px;
+}
+
+.tag-line {
+  padding-bottom: 50px;
+  color: var(--text-color);
+  font-family: var(--tag-line-font);
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0 auto;
+  text-align: center;
+  letter-spacing: 0.2em;
+  font-size: 2rem;
+  animation: typing 4s steps(40, end);
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.down-arrow p {
+  padding-top: 50px;
+  width: 100%;
+  color: var(--text-color);
+  font-family: var(--tag-line-font);
+  font-size: 4rem;
+  transform: rotate(90deg);
+  text-align: center;
+}
+
+.bounce {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+.project-section article {
+  height: 252px;
+  border: 1px solid var(--link-color);
+  margin: 15px;
+  border-radius:6px;
+  background-color: var(--project-bg-color);
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+footer {
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  flex: 1 1 auto;
+  padding-top: 25px;
+}
+
+/* Portrait and Landscape 6,7,8*/
+@media only screen and (min-device-width: 320px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+  body,
+  .nav {
+    font-size: 0.8rem;
+  }
+
+  ul {
+    display: inline-flex;
+  }
+  .nav-section > ul li {
+    margin: 0rem 0.8em 0 0;
+    padding: 0.25rem 0.8rem;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+  .tag-line {
+    font-size: 1.2rem;
+    padding-bottom: 0px;
+  }
+  main {
+    flex: 1;
+    overflow: auto;
+  }
+
+  #projects {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 359px) and (-webkit-min-device-pixel-ratio: 2) {
+  body,
+  .nav {
+    font-size: 0.8rem;
+  }
+
+  #navbar {
+    text-align: center;
+    padding: 0px;
+  }
+
+  ul {
+    display: inline-flex;
+  }
+  .nav-section > ul li {
+    margin: 0rem 0.8em 0 0;
+    padding: 0.25rem 0.8rem;
+    font-size: 1rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+  .tag-line {
+    font-size: 1rem;
+    padding-bottom: 0px;
+  }
+
+  main {
+    flex: 1;
+    overflow: auto;
+  }
+
+  #projects {
+    flex-direction: column;
+  }
+}
+
+/* Portrait and Landscape x*/
+@media only screen and (min-device-width: 360px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+  body,
+  .nav {
+    font-size: 0.8rem;
+  }
+
+  #navbar {
+    text-align: center;
+  }
+
+  ul {
+    display: inline-flex;
+  }
+  .nav-section > ul li {
+    margin: 0rem 0.8em 0 0;
+    padding: 0.25rem 0.8rem;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  .tag-line {
+    font-size: 1.2rem;
+    padding-bottom: 0px;
+  }
+
+  main {
+    flex: 1;
+    overflow: auto;
+  }
+
+  #projects {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+  .nav {
+    padding-right: 5%;
+  }
+
+  ul {
+    display: inline-flex;
+  }
+  .nav-section > ul li {
+    margin: 0rem 0.8em 0 0;
+    padding: 0.25rem 0.8rem;
+  }
+
+  .tag-line {
+    font-size: 1.2rem;
+    padding-bottom: 0px;
+  }
+
+  main {
+    flex: 1;
+    overflow: auto;
+  }
+
+  .project-section article {
+    height: 300px;
+    margin: 4px;
+  }
+}
+
+/* hirez Portrait and Landscape tablets */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 3) {
+  .nav {
+    padding-right: 5%;
+  }
+
+  ul {
+    display: inline-flex;
+  }
+  main {
+    flex: 1;
+    overflow: auto;
+  }
+}
